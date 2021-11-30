@@ -4,7 +4,9 @@ import type { RouteObject } from "react-router-dom";
 import Register from "../pages/Login/Register";
 const Login = lazy(() => import('../pages/Login'))
 
-
+/**
+ * 无用
+ */
 const BaseRoutes: RouteObject[] = [
     {
         path: '/login',
