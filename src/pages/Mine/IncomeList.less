@@ -1,0 +1,91 @@
+@import '../../assets/style/local.less';
+.order-list{
+    // margin-top: 46px;
+    .search{
+        background: #ffffff;
+        text-align: center;
+        line-height: 3;
+        border: 5px solid #f2f2f2;
+    }
+    .list{
+        .title{
+            font-size: 34*@fontSize;
+            font-weight: bold;
+            // line-height: 1;
+            margin: 30*@fontSize 0 26*@fontSize 20*@fontSize;
+        }
+        .waterfall{
+            // padding: 0 20*@fontSize;
+            overflow: hidden;
+            // display: flex;
+            // align-items:flex-start;
+            // justify-content: space-around;
+            .wrap {
+                .item{
+                    margin-top: 20*@fontSize;
+                    padding: 20*@fontSize 20*@fontSize;
+                    background-color: #fff;
+                    .shop-name{
+                        height: 74*@fontSize;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        img{
+                            height: 34*@fontSize;
+                            flex-shrink: 0;
+                            margin-right: 5px;
+                        }
+                    }
+                    .order{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        img{
+                            // height: 340*@fontSize;
+                            width: 340*@fontSize;
+                            border-radius: 5px;
+                        }
+                        .order-name{
+                            text-align: right;
+                            padding: 0 20*@fontSize;
+                            font-size: 28*@fontSize;
+                            // color: #1eeb37;
+                            .gname{
+                                height: 78*@fontSize;
+                                overflow: hidden;
+                            }
+                            .order-id{
+                                // text-align: center;
+                                color:#909090;
+                                padding-top:5px;
+                                font-size: 26*@fontSize;
+                            }
+                            .isPlus{
+                                color: red
+                            }
+                        }
+                        .order-content{
+                            text-align: right;
+                            .money{
+                                font-size: 28*@fontSize;
+                                &::before{
+                                    content: '\00A5';
+                                    font-size: 18*@fontSize;
+                                }
+                            }
+                        }
+                    }
+                    .order-pay{
+                        padding: 10px 0;
+                        text-align: right;
+                        letter-spacing: 1px;
+                        color: #505050;
+                    }
+                    .order-pre{
+                        height: 100*@fontSize;
+                    }
+                }
+            }
+        }
+    }
+}

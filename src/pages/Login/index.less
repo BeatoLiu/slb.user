@@ -1,0 +1,63 @@
+@import '../../assets/style/local.less';
+.login {
+	.login-cont {
+		min-height: calc(100vh);
+		padding: 75 * @fontSize 80 * @fontSize;
+		text-align: center;
+		background: #fff;
+		box-sizing: border-box;
+		.img-wrapper {
+			padding-top: 120 * @fontSize;
+			padding-bottom: 20 * @fontSize;
+			// img {
+				// width: 230 * @fontSize;
+			// }
+		}
+		.item {
+			display: flex;
+			align-items: center;
+			border-bottom: 1px solid #ccc;
+			padding: 20 * @fontSize 10 * @fontSize;
+			margin-top: 60 * @fontSize;
+			font-size: 16px;
+			.img-wrapp {
+				width: 70 * @fontSize;
+				text-align: left;
+				.user-img {
+					height: 45 * @fontSize;
+                    // width: 100%;
+				}
+			}
+
+			.clear {
+				width: 30 * @fontSize;
+			}
+			input {
+				flex: 1;
+			}
+		}
+		.btn {
+			font-size: 16px;
+			margin-top: 120 * @fontSize;
+			display: inline-block;
+			width: 600 * @fontSize;
+			line-height: 100 * @fontSize;
+			border-radius: 50 * @fontSize;
+			background: @primaryColor;
+			color: #fff;
+		}
+		p {
+			font-size: 16px;
+			text-align: right;
+			color: #9a9a9a;
+			margin-top: 20 * @fontSize;
+		}
+		.sign {
+			margin-top: 200 * @fontSize;
+			color: #9a9a9a;
+			span {
+				color: #e7283b;
+			}
+		}
+	}
+}
