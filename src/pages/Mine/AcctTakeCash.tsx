@@ -52,8 +52,11 @@ const AcctTakeCash = () => {
             setCountDis(false)
             window.clearInterval(timer.current)
         }
+    }, [counting])
+
+    useEffect(() => {
         setDis(!!params.takeCashSum && params.certCode.length === 6)
-    }, [counting, params.takeCashSum, params.certCode])
+    }, [params.takeCashSum, params.certCode])
 
     const change = (val: number | string, name: string) => {
         if (name === 'currencyType') {

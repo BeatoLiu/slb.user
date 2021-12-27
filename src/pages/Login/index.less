@@ -1,11 +1,11 @@
 @import '../../assets/style/local.less';
 .login {
 	.login-cont {
+		box-sizing: border-box;
 		min-height: calc(100vh);
 		padding: 75 * @fontSize 80 * @fontSize;
 		text-align: center;
 		background: #fff;
-		box-sizing: border-box;
 		.img-wrapper {
 			padding-top: 120 * @fontSize;
 			padding-bottom: 20 * @fontSize;
@@ -16,10 +16,10 @@
 		.item {
 			display: flex;
 			align-items: center;
-			border-bottom: 1px solid #ccc;
-			padding: 20 * @fontSize 10 * @fontSize;
 			margin-top: 60 * @fontSize;
+			padding: 20 * @fontSize 10 * @fontSize;
 			font-size: 16px;
+			border-bottom: 1px solid #ccc;
 			.img-wrapp {
 				width: 70 * @fontSize;
 				text-align: left;
@@ -37,20 +37,20 @@
 			}
 		}
 		.btn {
-			font-size: 16px;
-			margin-top: 120 * @fontSize;
 			display: inline-block;
 			width: 600 * @fontSize;
-			line-height: 100 * @fontSize;
-			border-radius: 50 * @fontSize;
-			background: @primaryColor;
+			margin-top: 120 * @fontSize;
 			color: #fff;
+			font-size: 16px;
+			line-height: 100 * @fontSize;
+			background: @primaryColor;
+			border-radius: 50 * @fontSize;
 		}
 		p {
+			margin-top: 20 * @fontSize;
+			color: #9a9a9a;
 			font-size: 16px;
 			text-align: right;
-			color: #9a9a9a;
-			margin-top: 20 * @fontSize;
 		}
 		.sign {
 			margin-top: 200 * @fontSize;
