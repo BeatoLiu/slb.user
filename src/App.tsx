@@ -12,7 +12,7 @@ const App: React.FC = () => {
     return (
         <div className="app">
             <ConfigProvider themeVars={themeVars}>
-                <Routes></Routes>
+                <Routes/>
             </ConfigProvider>
         </div>
     );
