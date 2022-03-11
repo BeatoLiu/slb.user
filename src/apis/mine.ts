@@ -1,6 +1,14 @@
 import { httpGet, httpPost } from "./axios";
 import { baseResT } from "./model/base";
-import { acctSituationRes, bindMemberAliPayAcctModel, getMemberAcctListRes, parseAliPayAcctRes, selectMemberAcctDetailModel, selectMemberAcctDetailRes, takeMemberCashModel } from "./model/mineModel";
+import {
+	acctSituationRes,
+	bindMemberAliPayAcctModel,
+	getMemberAcctListRes,
+	parseAliPayAcctRes,
+	selectMemberAcctDetailModel,
+	selectMemberAcctDetailRes,
+	takeMemberCashModel
+} from "./model/mineModel";
 
 enum Api {
     ACCT_SITUATION = 'mem/memberAcct/acctSituation',
@@ -22,25 +30,25 @@ export const acctSituation = () => httpPost<acctSituationRes>(Api.ACCT_SITUATION
 
 /**
  * @description 查詢支付寶帳戶信息
- * @returns 
+ * @returns
  */
 export const parseAliPayAcct = () => httpGet<parseAliPayAcctRes>(Api.PARSE_ALIPAY_ACCT)
 
 /**
  * @description 修改或者提交支付寶信息時，發送短信
- * @returns 
+ * @returns
  */
 export const sendBindAliPayAcctSms = () => httpGet<baseResT>(Api.SEND_BIND_ALIPAY_ACCT_SMS)
 
 /**
  * @description 修改或者提交支付寶信息時，發送短信
- * @returns 
+ * @returns
  */
 export const bindMemberAliPayAcct = (p: bindMemberAliPayAcctModel) => httpGet<baseResT>(Api.BIND_MEMBER_ALIPAY_ACCT, p)
 
 /**
  * @description 修改或者提交支付寶信息時，發送短信
- * @returns 
+ * @returns
  */
 export const selectMemberAcctDetail = (p: selectMemberAcctDetailModel) => httpPost<selectMemberAcctDetailRes>(Api.SELECT_MEMBER_ACCT_DETAIL, p)
 
@@ -49,14 +57,14 @@ export const getMemberAcctList = () => httpGet<getMemberAcctListRes>(Api.GET_MEM
 
 /**
  * @description 提现时发送短信验证码
- * @returns 
+ * @returns
  */
 export const sendTakeCashSms = () => httpGet<baseResT>(Api.SEND_TAKE_CASH_SMS)
 
 /**
  * @description 会员提现
- * @param p 
- * @returns 
+ * @param p
+ * @returns
  */
 export const takeMemberCash = (p: takeMemberCashModel) => httpGet<baseResT>(Api.TAKE_MEMBER_CASH, p)
 

@@ -2,7 +2,6 @@ import { httpGet, httpPost } from './axios'
 import { baseResT } from './model/base'
 import { showDictionaryModel, showDictionaryRes, showSubAreaModel, showSubAreaRes, smsModel } from './model/commonModel'
 
-
 enum Api {
     SEND_SMS_CODE = 'mg/common/sendSmsCode',
     SHOW_DICTIONARY = 'mg/common/showDictionary',
@@ -20,14 +19,14 @@ export const sendSmsCode = (p: smsModel) => httpGet<baseResT>(Api.SEND_SMS_CODE,
 /**
  * @description 查詢字典
  * @param p.dType 業務類型
- * @returns 
+ * @returns
  */
 export const showDictionary = (p: showDictionaryModel) => httpGet<showDictionaryRes>(Api.SHOW_DICTIONARY, p);
 
 /**
  * @description 查詢字典
  * @param p.dType 業務類型
- * @returns 
+ * @returns
  */
 export const showSubArea = (p: showSubAreaModel) => httpGet<showSubAreaRes>(Api.SHOW_SUB_AREA, p);
 
@@ -35,6 +34,6 @@ export const showSubArea = (p: showSubAreaModel) => httpGet<showSubAreaRes>(Api.
 /**
  * @description 獲取TAA價格
  * @param p.dType 業務類型
- * @returns 
+ * @returns
  */
 export const getTAAPrice = () => httpPost<baseResT<number>>(Api.GET_TAA_PRICE);

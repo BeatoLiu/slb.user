@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, AxiosRequestHeaders, Method } from 'axios'
 import { stringify } from "qs"
 import { Toast } from 'react-vant'
 
-import { hostName, payName } from '../utils/config'
+import { hostName, payName } from "@/utils/config"
 // import logoImg from '../assets/img/pay-logo.png'
 
 
@@ -84,7 +84,7 @@ const ajax_main = <T = any>(method: Method, url: string, params: any, config: co
             .catch(function (error) {
                 reject(error)
                 Toast.clear()
-                console.log(error.message)
+				// console.log(error.message)
             })
     })
 }
@@ -123,7 +123,7 @@ export const httpPut = (url: string, params?: any, { showLoading = true, type }:
  * @param url 請求地址
  * @param params 參數
  * @param param3 配置信息
- * @returns 
+ * @returns
  */
 export const httpRequest = <T = any>(method: Method, url: string, params: any, { showLoading = true, type }: configInter = {}): Promise<T> => {
     const config: configInter = { showLoading, type }

@@ -1,5 +1,4 @@
 import { httpPost, httpGet } from './axios'
-// import { stringify } from 'qs'
 import { baseResT } from './model/base'
 import { pwdLoginModel, pwdLoginRes, registerModel } from './model/loginModel'
 
